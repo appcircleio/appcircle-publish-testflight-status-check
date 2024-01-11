@@ -1,0 +1,20 @@
+platform: iOS
+buildPlatform:
+displayName: "Check TestFlight Status"
+description: "Checks beta build status on TestFlight"
+marketPlace: "AppleAppStore"
+runOn: "Server"
+scheduled: true
+inputs:
+- key: "AC_VALIDATION_CONDITION"
+  defaultValue: "OneOfExternalOrInternal"
+  editorType: select
+  options: "OneOfExternalOrInternal,ExternalOnly,InternalOnly,Both"
+  isRequired: false
+  title: Acceptance Condition
+  description: "TestFlight's internalBuildState and externalBuildState will be checked according the selection"
+  helpText:
+processFilename: bash
+processArguments: '%AC_STEP_TEMP%/main.sh'
+files:
+- "main.sh"
