@@ -1,6 +1,6 @@
 platform: iOS
 buildPlatform:
-displayName: "Check TestFlight Status"
+displayName: "Get Approval from TestFlight"
 description: "Checks beta build status on TestFlight"
 marketPlace: "AppleAppStore"
 runOn: "Server"
@@ -9,6 +9,7 @@ inputs:
 - key: "AC_VALIDATION_CONDITION"
   defaultValue: "OneOfExternalOrInternal"
   editorType: select
+  optionTitles: "One of the External or Internal,External Only,Internal Only,Both"
   options: "OneOfExternalOrInternal,ExternalOnly,InternalOnly,Both"
   isRequired: false
   title: Acceptance Condition
