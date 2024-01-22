@@ -1,7 +1,7 @@
 platform: iOS
 buildPlatform:
 displayName: "Get Approval from TestFlight"
-description: "Checks beta build status on TestFlight"
+description: "Get approval for the publish from TestFlight"
 marketPlace: "AppleAppStore"
 runOn: "Server"
 scheduled: true
